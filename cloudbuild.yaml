@@ -20,3 +20,10 @@ images:
 - 'gcr.io/$PROJECT_ID/docker-compose:latest'
 - 'gcr.io/$PROJECT_ID/docker-compose:${_DOCKER_COMPOSE_VERSION}'
 tags: ['cloud-builders-community']
+
+# Definindo que os logs irão para o Cloud Logging
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+# Se você estiver usando uma conta de serviço personalizada
+serviceAccount: conta-servico@inlaid-course-418423.iam.gserviceaccount.com
